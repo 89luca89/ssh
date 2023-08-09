@@ -1,4 +1,4 @@
-module github.com/89luca89/ssh
+module github.com/loft-sh/ssh
 
 go 1.12
 

@@ -122,7 +122,7 @@ func (h *ForwardedUnixHandler) HandleSSHRequest(ctx Context, srv *Server, req *g
 
 		// Create socket parent dir if not exists.
 		parentDir := filepath.Dir(addr)
-		err = os.MkdirAll(parentDir, 0700)
+		err = os.MkdirAll(parentDir, 0755)
 		if err != nil {
 			// TODO: log mkdir failure
 			return false, nil
