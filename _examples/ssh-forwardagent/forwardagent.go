@@ -12,7 +12,7 @@ func main() {
 	ssh.Handle(func(s ssh.Session) {
 		cmd := exec.Command("ssh-add", "-l")
 		if ssh.AgentRequested(s) {
-			l, err := ssh.NewAgentListener()
+			l, _, err := ssh.NewAgentListener("")
 			if err != nil {
 				log.Fatal(err)
 			}
